@@ -49,7 +49,7 @@ function Teams(){
     return (
        <div className='container'>
         <div className={style.main}>
-        <h1 className={style.title}>Our Leader's</h1>
+        <h1 className={style.title}>Our Leaders</h1>
         <Carousel
         swipeable={true}
         showDots={false}

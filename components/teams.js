@@ -80,7 +80,7 @@ function Teams(){
             {
                 project.project.map((items,idx)=>{
                     return (
-                        <div className={style.card}>
+                        <div className={style.card} key={idx}>
                             <Image src={Img} 
                             width="275"
                             height="275"

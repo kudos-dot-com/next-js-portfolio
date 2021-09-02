@@ -84,6 +84,7 @@ function Teams(){
                             <Image src={Img} 
                             width="275"
                             height="275"
+                            alt=""
                             ></Image>
 
                             <div className={style.details}>

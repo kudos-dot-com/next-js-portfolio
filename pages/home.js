@@ -32,9 +32,8 @@ const Header = () => {
                     </p>
                 
                 
-            <Link href="/about">
+
                 <Button className={HomeStyle.button} title="Know More"/>
-            </Link>
             </div>
             {/* <Footer /> */}
         </div>

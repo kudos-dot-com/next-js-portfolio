@@ -1,0 +1,144 @@
+@import '_colors';
+@import '_fonts';
+@import 'breakpoint';
+.body{
+    margin-top: 50px;
+    width: 100%;
+    height: 400px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    // border-top: 1px solid #707070;
+    opacity: 1;
+    display: flex;
+  
+    justify-content: space-between;
+    @include media('<=1000px','>500px')
+    {  flex-wrap: wrap;
+    }
+   
+    @include media('<=500px')
+    {  
+    // flex-wrap: wrap;
+        height:550px; 
+        display: block;
+        overflow-y: hidden;
+    }
+    overflow-x: hidden;
+}
+.section1
+{
+    align-self: center;
+    @include media('<=tablet')
+    {
+        display:grid;
+        justify-content: start;
+    }
+}
+.section2{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    div
+    {
+        margin:0px 15px;
+    }
+    @include media('<=tablet')
+    {
+        // display:grid;
+        // justify-content: start;
+        justify-content: start;
+        margin-top: 15px;
+    }
+    
+}
+.section3{
+     align-self: center;
+     @include media('<=1000px','>500px')
+    {  width: 70%;
+    }
+     @include media('<=tablet')
+    {
+       margin:30px auto;        
+    }
+}
+.icon{
+    font-size: 30px;
+    // padding-right:5px;
+    color: #000000;
+}
+.IconTile
+{
+    display: flex;
+    @include media('<=tablet')
+    {
+        justify-content: center;
+    }
+}
+.logo{
+    text-align: left;
+    font-weight: bold;
+    font: normal normal  30px Raleway;
+    text-shadow: #000000 5px;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+    @include media('<=tablet')
+    {
+       text-align: center;        
+    }
+}
+.Support{
+    text-align: left;
+    font: normal normal normal 28px/33px Raleway;
+    letter-spacing: 0px;
+    color: black;
+    opacity: 1;
+    
+}
+.SupportData{
+        text-align: left;
+        font: normal normal normal 23px/27px Raleway;
+        letter-spacing: 0px;
+        color: #000000;
+        opacity: 1;
+        text-decoration: none;
+        cursor: pointer;
+        text-transform: capitalize;
+        background-blend-mode: screen;
+        &:hover{
+            color: #FFF000;
+        }   
+}
+.form{
+    width: 345px;
+    height: 40px;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    opacity: 1;
+    outline: none;
+    padding:0px 10px;
+    margin-bottom:7px;
+    @include media('<=tablet')
+    {
+        width: 100%;       
+    }
+    @include media('<=1000px','>500px')
+    {  width: 100%;
+    }
+    
+}
+.button{
+    width: 130px;
+    height: 28px;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 9px;
+    opacity: 1;
+    color: #ffffff;
+    display: block;
+    margin-left: auto;
+    text-transform: capitalize;
+    @include media('<=1000px','>500px')
+    {  
+        
+    }
+}

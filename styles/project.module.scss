@@ -1,0 +1,124 @@
+@import '_fonts.scss';
+@import 'breakpoint';
+.main{
+    background-color: #222222;    
+    padding-bottom: 70px;
+
+}
+.body{
+position: relative;    
+width: 100%;
+height: 100vh;
+background: transparent url('../public/TiVRA\ photo.jpg') 0% 0% no-repeat padding-box;
+background-size: cover;
+background-color: transparent;
+background-color: #222222;
+@include media('<=1080px')
+    {
+        background: transparent url('../public/christian-englmeier-J7EUjSlNQtg-unsplash@2x.png') 0% 0% no-repeat padding-box;
+        background-size:cover;
+    }
+}
+.background{
+    background-color:transparent;
+    width: 100%;
+    position: absolute;
+
+}
+
+.Button1{
+    display: block;
+    // justify-content: center;
+    margin-left:auto;
+    font: normal normal bold 21px Raleway;
+    text-align: center;
+    letter-spacing: 0px;
+    width: 166px;
+    padding: 7px 21px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 53px;
+    opacity: 1;
+    @include media('<=tablet')
+    {
+    transform: scale(0.8);
+    margin: auto;
+    }
+}
+.floatingText{
+    position: absolute;
+    top:65%;
+    right:4%;
+    @include media('<=tablet')
+    {
+        width:100%;
+        top:50%;
+        right:50%;
+        transform: translate(50%,0%);
+    }
+    h1{
+        text-transform: capitalize;
+        text-align: center;
+        font: normal normal bold 70px Raleway;
+        letter-spacing: 0px;    
+        color: #FFFFFF;
+        opacity: 1;
+        @include media('<=phone')
+        {
+            font: normal normal bold 34px Raleway;            
+        }
+        @include media('>phone','<=450px')
+        {
+            text-align: center;
+            text-shadow: 2px 1px 2px #0A0403;
+            font: normal normal bold 46px Raleway;            
+        }
+        @include media('>450px','<=570px')
+        {
+            text-align: center;
+            text-shadow: 2px 1px 2px #0A0403;
+            font: normal normal bold 58px Raleway;            
+        }
+        @include media('>570px','<=1080px')
+        {
+            text-align: center;
+            text-shadow: 2px 1px 2px #0A0403;
+            font: normal normal bold 62px Raleway;            
+        }
+    }
+    h3{
+        text-transform: capitalize;
+        text-align:right;
+        font: normal normal bold 45px Raleway;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        @include media('<=phone')
+        {
+            text-align: center;
+            font: normal normal bold 28px Raleway;            
+        }
+        @include media('>phone','<=tablet')
+        {
+            text-align: center;
+            text-shadow: 2px 1px 2px #0A0403;
+            font: normal normal bold 38px Raleway;            
+        }
+    }
+}
+.slider{
+    margin-top: 100px;
+    padding:0px 50px;
+    @include media('<=tablet')
+    {
+        display: none;       
+    }
+}
+.barcards{
+    margin-top: 50px;
+    padding:0px 15px;
+    @include media('>tablet')
+    {
+        display: none;       
+    }
+}

@@ -1,0 +1,121 @@
+@import '_fonts';
+@import 'breakpoint';
+.main{
+    display:flex;
+    justify-content: center;
+    padding: 20px 20px;
+    @include media('<=560px')
+    {
+        display: flex;
+        flex-direction:column;
+        flex-flow: column-reverse;
+    }
+}
+
+.body{
+    position: relative;
+    color: aliceblue;
+    text-align: right;
+    width:100%;
+    padding: 25px;
+    margin: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include media('<=tablet')
+    {
+        width: 90%;
+       padding: 15px;
+    }
+    h1{
+        text-transform: capitalize;
+        padding-top:15px;
+        font: normal normal bold 52px/61px Raleway;
+        @include media('<=tablet')
+        {
+            display: none;
+        }
+        @include media('<=1100px','>tablet')
+        {
+            font: normal normal bold 30px/35px Raleway;
+        }
+    }
+    p{
+        padding-top:0px;
+        font: normal normal normal 33px/39px Raleway;
+        @include media('<=tablet')
+        {
+            text-align: left;
+            font: normal normal normal 21px/25px Raleway;
+            letter-spacing: 0px;
+        }
+        @include media('<=1100px','>tablet')
+        {
+            font: normal normal bold 20px/22px Raleway;
+        }
+    }
+    button{
+        width: 210px;
+        position: absolute;
+        bottom: 0;
+        height: 60px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid #707070;
+        border-radius: 16px;    
+        opacity: 1;
+        font: normal normal bold 30px Raleway;
+        letter-spacing: 0px;
+        color: #000000;
+        align-self: flex-end;
+        @include media('<=phone')
+        {
+            width: 104px;
+            height: 28px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            border-radius: 7px;
+            display: block;
+            margin-left: auto;
+            font: normal normal bold 13px/15px Raleway;
+        }
+        @include media('<=tablet')
+        {
+            width: 124px;
+            height: 48px;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border: 1px solid #707070;
+            border-radius: 7px;
+            display: block;
+            margin-left: auto;
+            font: normal normal bold 15px/17px Raleway;
+        }
+        @include media('<=1100px','>tablet')
+        {
+            width: 124px;
+            height: 48px;
+            font: normal normal bold 20px/21px Raleway;
+            border-radius: 12px;
+        }
+    }
+}
+
+.imagecontainer
+{
+    width: 100%;
+}
+
+.icon{
+    // display: block;
+    color: #FFFFFF;   
+    padding-right:5px;
+    @include media('<=tablet')
+    {
+        display: none;
+    }
+   
+}
+.IconTile
+{
+    display: flex;
+    justify-content:flex-end   
+}

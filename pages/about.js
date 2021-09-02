@@ -1,0 +1,40 @@
+import Navbar from '../components/navbar'
+import AboutStyle from '../styles/about.module.scss'
+import Mission from '../components/mission'
+import Footer from '../components/footer'
+import Job from '../components/job'
+import Teams from '../components/teams'
+const About = () => {
+    return ( 
+        <div className={AboutStyle.main}>
+            <div className={AboutStyle.body}>
+                <div className={AboutStyle.background}>
+                    <Navbar />
+                </div>
+                <div className={`container-fluid d-flex flex-column justify-content-center justify-content-lg-center  ${AboutStyle.HeaderBody}`}>
+                    <div className="d-flex  flex-column justify-content-center align-self-center align-self-lg-end pr-5">
+                        <h1 className="text-light text-capitalize align-self-center">About US</h1>
+                        <p className="text-light text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+        </div>
+        <div className={AboutStyle.section2}>
+            <Mission />
+        </div>
+
+        {/* Job */}
+
+        <div>
+            <Job />
+        </div>
+
+        {/* teamss */}
+
+        <Teams />
+        
+            {/* <Footer /> */}
+        </div>
+     );
+}
+ 
+export default About;

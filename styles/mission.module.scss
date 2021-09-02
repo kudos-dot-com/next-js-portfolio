@@ -1,0 +1,72 @@
+@import '_fonts';
+@import 'breakpoint';
+.main{
+    display: flex;
+    justify-content: space-around;
+    @include media('<=tablet')
+    {
+        flex-direction: column;           
+    } 
+    margin-top: 25px;
+}
+.section1{
+    align-self: center;
+    width: 40%;
+    color: #ffffff;
+    h1{
+        text-align: left;
+        font: normal normal bold 87px/87px Raleway;
+        text-transform: capitalize;
+        @include media('<=tablet')
+        {
+            font: normal normal bold 34px/42px Noto Sans;
+            letter-spacing: 0px;
+            text-align: center;                   
+        } 
+    }
+    p{
+        text-align: left;
+        font: normal normal medium 22px/26px Noto Sans;
+        @include media('<=tablet')
+        {
+            font: normal normal medium 16px/24px Noto Sans;
+            text-align: center;                        
+        } 
+    }
+    @include media('<=tablet')
+    {
+        width: 90%;
+    } 
+}
+.section2
+{   width: 40%;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    div{
+    
+    &:nth-child(2)
+    {
+        padding: 5px;
+        align-self: center;
+    }
+    &:nth-child(1)
+    {   
+       display: flex;
+       align-self: center;
+       div{
+           &:nth-child(1){
+               margin-right: 4px;
+           }
+           &:nth-child(2){
+            margin-left: 4px;
+        }
+       }
+    }
+    }
+    @include media('<=tablet')
+    {
+        width: 90%;          
+    } 
+}

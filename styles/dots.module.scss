@@ -1,0 +1,22 @@
+.dots{
+    display: flex;
+    justify-content:center;
+    margin-top: 10px;
+    div{
+        align-self: center;
+        margin: 0px 1px;
+    }
+}
+.isactive{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+.notActive{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 0.26;
+}

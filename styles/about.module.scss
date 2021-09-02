@@ -1,0 +1,60 @@
+@import '_fonts.scss';
+@import 'breakpoint';
+.main{
+    background-color: #222222;    
+    padding-bottom: 70px;
+
+}
+.body{
+position: relative;    
+width: 100%;
+height: 100vh;
+background: transparent url('../public/About@2x.png') 0% 0% no-repeat padding-box;
+// opacity: 0.52;
+background-size: cover;
+background-color: transparent;
+background-color: #222222;
+@include media('<=phone')
+{
+    background: transparent url('../public/About.jpg') 0% 0% no-repeat padding-box;               
+    background-position: 90% 30%;
+    background-size:cover;
+    // object-fit:contain;
+
+} 
+}
+.background{
+    background-color:transparent;
+    width: 100%;
+}
+.HeaderBody{
+    width: 100%;
+    height:100%;
+    align-self:baseline;
+    div{
+        width: 50%;
+        @include media('<=tablet')
+        {
+            width: 100%;           
+        } 
+    }
+    h1{
+        font: normal normal bold 87px/87px Raleway;
+    @include media('<=phone')
+    {
+        font: normal normal bold 40px/48px Noto Sans;
+        letter-spacing: 0px;
+        // text-align:center        
+    }        
+    }
+    p{
+        font: normal normal normal 20px Montserrat;
+        text-shadow: 2px 1px 2px #0A0403;
+        @include media('<=phone')
+        {
+            // text-align: center;
+            font: normal normal 600 18px/24px Noto Sans;           
+        }   
+    }
+}
+

@@ -1,0 +1,112 @@
+import React,{useState} from 'react'
+import FooterStyle from '../styles/footer.module.scss'
+import Image from 'next/image'
+import Icon from '../assets/icon' 
+import Support from '../assets/support'
+import { Collapse, Media ,Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import Link from 'next/link'
+import { AiOutlineInstagram , AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai'
+import { FaFacebook } from 'react-icons/fa'
+const Footer = () => {
+    const [links,setlinks]=useState(["home","project","about"])
+    return ( 
+        <div className={`container-fluid container-md  ${FooterStyle.body}`}>
+            <div className={FooterStyle.section1}>
+            <h1 className={FooterStyle.logo} ><b >TiVRA Ai</b></h1>
+            <div className={FooterStyle.IconTile}>
+                
+            <div className={FooterStyle.icon}>
+            <FaFacebook />
+            </div>
+
+            <div className={FooterStyle.icon}>
+                <AiFillLinkedin />
+            </div>
+
+            <div className={FooterStyle.icon}>
+                <AiOutlineTwitter />                
+            </div>
+
+            <div className={FooterStyle.icon}>
+                <AiOutlineInstagram />
+            </div>
+                
+                {/* {
+                    Icon.icon.map(items=>{
+                        return (
+                            <div  key={items.data} className={FooterStyle.icon}>
+                                <Image 
+                                height="30"
+                                width="30"
+                                src={items.data} 
+                                alt="" ></Image>
+                            </div>
+                        )
+                    })
+                } */}
+            </div>
+            </div>
+
+            {/* support */}
+            <div className={FooterStyle.section2}>
+            <div className={FooterStyle.subpart}>
+            <h2 className={FooterStyle.Support}><b>Support</b></h2>
+                <h3 className={FooterStyle.SupportData}>Contact</h3>
+                <h3 className={FooterStyle.SupportData}>FAQs</h3>
+                <h3 className={FooterStyle.SupportData}>Products</h3>
+                <h3 className={FooterStyle.SupportData}>Downloads</h3>
+            {/* {
+                Support.item.map(item=>{
+                        return (
+                            <div  key={item.data} >
+                                <h3 className={FooterStyle.SupportData}>{item.data}</h3>
+                            </div>
+                        )
+                })
+            }    */}
+            </div>    
+
+             {/* tivra */}
+             <div>
+            <h2 className={FooterStyle.Support}><b>TiVRA Ai</b></h2>
+                <Link href={`/home`} passHref>
+                    <NavLink className={FooterStyle.SupportData} >home</NavLink>
+                </Link>
+
+                <Link href={`/project`} passHref>
+                    <NavLink className={FooterStyle.SupportData} >project</NavLink>
+                </Link>
+
+                <Link href={`/about`} passHref>
+                    <NavLink className={FooterStyle.SupportData} >about</NavLink>
+                </Link>
+
+            {/* {
+                links.map((items,index)=>{
+                    return (
+                        <div key={items}>
+                            <Link href={`/${items}`} key={items} passHref>
+                                <NavLink className={FooterStyle.SupportData} key={items}>{items}</NavLink>
+                            </Link>
+                        </div>   
+                    )
+                })
+            }    */}
+            </div>
+            </div>
+        {/* feedback */}
+        <div className={FooterStyle.section3}>
+        <h2 className={FooterStyle.Support}><b>Stay In Touch</b></h2>
+        <form>
+            <input type="text" 
+            placeholder="Enter Your Email"
+            className={FooterStyle.form}></input>
+            <br />
+            <button type="submit" className={FooterStyle.button}>sign up</button>
+        </form>
+        </div>    
+        </div>
+     );
+}
+ 
+export default Footer;

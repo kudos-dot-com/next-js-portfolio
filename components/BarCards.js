@@ -94,6 +94,7 @@ const BarCards = ({ data }) => {
                 <a
                   href={data.GLink ? data.GLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <FaGithub />
                 </a>

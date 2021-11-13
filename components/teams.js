@@ -1,4 +1,5 @@
-import react,{useState} from 'react'
+import react,{useState,useEffect} from 'react'
+import { api } from "../assets/info";
 import style from '../styles/teams.module.scss'
 import Image from 'next/image'
 import Carousel from 'react-multi-carousel'
@@ -9,11 +10,26 @@ import Img from '../public/photo-1506863530036-1efeddceb993.png'
 import Dots from '../components/dots'
 import { AiOutlineInstagram , AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai'
 import { FaFacebook } from 'react-icons/fa'
+import axios from "axios";
+
 function Teams(){
     
   const [count,setcount]=useState(0);
   const [direction,setDirection]=useState(0);
-
+  const [data, setdata] = useState([]);
+  useEffect(() => {
+    console.log(api);
+    axios
+      .get(`${api}/teams`)
+      .then((response) => {
+        setdata(response.data);
+        console.log(response);
+      })
+      .catch((err) => {
+        // setdata([]);
+        console.log(err);
+      });
+  }, []);
   const responsive = {
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
@@ -78,7 +94,7 @@ function Teams(){
       >        
            
             {
-                project.project.map((items,idx)=>{
+                data.map((items,idx)=>{
                     return (
                         <div className={style.card} key={idx}>
                             <Image src={Img} 
@@ -89,8 +105,8 @@ function Teams(){
 
                             <div className={style.details}>
                                 <div>
-                                    <h1>john doe</h1>
-                                    <h1>Team Lead</h1>
+                                    <h1>{items.name}</h1>
+                                    <h1>{items.role}</h1>
                                 </div>
 
                                 <div>

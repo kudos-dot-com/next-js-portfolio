@@ -27,7 +27,7 @@ export default function ProjectComponent(props) {
       <div className="App">
         <div >
            {
-               project.project.map((items,idx)=>{
+               props.dets.map((items,idx)=>{
                    return (
                     <div 
                     data-aos='fade-down'        

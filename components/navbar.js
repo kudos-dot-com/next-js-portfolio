@@ -22,7 +22,7 @@ function MainNavbar() {
                     links.map((items,index)=>{
                         return (
                             <NavItem key={items}>
-                                <Link  href={`/${items}`} passHref>
+                                <Link href={`/${items}`} passHref>
                                     <NavLink className={router.pathname == `/${items}`?HeaderStyle.links : HeaderStyle.navlinks}>
                                         {items}</NavLink>
                                 </Link>

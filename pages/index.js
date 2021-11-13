@@ -7,19 +7,21 @@ import HomeStyle from '../styles/home.module.scss'
 import Footer from '../components/footer'
 import HomeLanding from '../components/HomeLanding'
 import Router from 'next/router'
-
+import Loader from '../components/loading';
 export default function Home() {
   
 useEffect(() => {
     const {pathname} = Router
+   var a=setTimeout(()=>{
     if(pathname == '/' ){
-        Router.push('/home')
-    }
+      Router.push('/home')
+  }
+   },1000)
 });
   return (
     <div className={HomeStyle.body}>
         <div>
-          <HomeLanding />
+          <Loader />
         </div>
     </div>
   )

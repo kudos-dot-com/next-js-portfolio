@@ -6,7 +6,8 @@ import Support from '../assets/support'
 import { Collapse, Media ,Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import Link from 'next/link'
 import { AiOutlineInstagram , AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai'
-import { FaFacebook } from 'react-icons/fa'
+import { FaFacebook,FaYoutube } from 'react-icons/fa'
+import { social } from '../assets/info'
 const Footer = () => {
     const [links,setlinks]=useState(["home","project","about"])
     return ( 
@@ -16,19 +17,23 @@ const Footer = () => {
             <div className={FooterStyle.IconTile}>
                 
             <div className={FooterStyle.icon}>
-            <FaFacebook />
+            <a href={social.facebook}><FaFacebook /></a>
             </div>
 
             <div className={FooterStyle.icon}>
-                <AiFillLinkedin />
+               <a href={social.linkedin} >
+               <AiFillLinkedin />
+               </a>
             </div>
 
             <div className={FooterStyle.icon}>
-                <AiOutlineTwitter />                
+            <a href={social.twitter}><AiOutlineTwitter /></a>
+                        
             </div>
 
             <div className={FooterStyle.icon}>
-                <AiOutlineInstagram />
+            <a href={social.instagram}><AiOutlineInstagram /></a>
+                
             </div>
                 
                 {/* {

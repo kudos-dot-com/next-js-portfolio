@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import Img from '../public/chuttersnap-eH_ftJYhaTY-unsplash.png'
 import style from '../styles/mission.module.scss'
+import { content } from '../assets/info'
 const Mission = () => {
     return ( 
         <div className={style.main}>
            <div className={style.section1}>
                 <h1>our mission</h1>
-                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>  
+                <p>{content.about.header.mission.body}</p>  
             </div>
 
             <div className={style.section2}>

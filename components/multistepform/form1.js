@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
-function form1() {
+function Form1() {
+  const message="We'll never share your email with anyone else.";
   return (
     <div>
       <Form>
@@ -21,7 +22,7 @@ function form1() {
             placeholder="Enter email"
           />
           <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
+            {message}
           </Form.Text>
         </Form.Group>
 
@@ -38,4 +39,4 @@ function form1() {
   );
 }
 
-export default form1;
+export default Form1;

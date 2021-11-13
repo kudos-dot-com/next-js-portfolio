@@ -31,6 +31,7 @@ const Description = ({ isVisible, item }) => {
                 <a
                   href={item.item.FbLink ? item.item.FbLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <FaFacebook />
                 </a>
@@ -44,6 +45,7 @@ const Description = ({ isVisible, item }) => {
                 <a
                   href={item.item.lnLink ? item.item.lnLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <AiFillLinkedin />
                 </a>
@@ -57,6 +59,7 @@ const Description = ({ isVisible, item }) => {
                 <a
                   href={item.item.YLink ? item.item.YLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <FaYoutube />
                 </a>
@@ -70,6 +73,7 @@ const Description = ({ isVisible, item }) => {
                 <a
                   href={item.item.GLink ? item.item.GLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <FaGithub />
                 </a>

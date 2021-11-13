@@ -52,6 +52,7 @@ const BarCards = ({ data }) => {
                 <a
                   href={data.FbLink ? data.FbLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <FaFacebook />
                 </a>
@@ -65,6 +66,7 @@ const BarCards = ({ data }) => {
                 <a
                   href={data.lnLink ? data.lnLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <AiFillLinkedin />
                 </a>
@@ -78,6 +80,7 @@ const BarCards = ({ data }) => {
                 <a
                   href={data.YLink ? data.YLink : ""}
                   target="_blank"
+                  rel='noopener noreferrer'
                 >
                   <FaYoutube />
                 </a>

@@ -21,7 +21,7 @@ module.exports={
             },
             // ongoing section
             ongoing:{
-                visible:true
+                visible:false
             }
         },
         // about page

@@ -13,7 +13,7 @@ import { collection, addDoc } from "firebase/firestore";
 const Footer = () => {
     const [links,setlinks]=useState(["home","project","about"])
     const [Email,setemail]=useState("");
-    
+    const [status,setstatus]=useState(false)
     async function SendEmail()
     {
         console.log(Email);
@@ -128,6 +128,9 @@ const Footer = () => {
             placeholder="Enter Your Email"
             className={FooterStyle.form}></input>
             <br />
+            {
+          status?
+          <p>Thank You!</p>:""}
             <button type="submit" onClick={SendEmail} className={FooterStyle.button}>send</button>
         </form>
         </div>    

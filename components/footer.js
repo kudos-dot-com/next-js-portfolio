@@ -8,14 +8,16 @@ import Link from 'next/link'
 import { AiOutlineInstagram , AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai'
 import { FaFacebook,FaYoutube } from 'react-icons/fa'
 import { social } from '../assets/info'
+import { db } from "../components/firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 const Footer = () => {
     const [links,setlinks]=useState(["home","project","about"])
     const [Email,setemail]=useState("");
     const [status,setstatus]=useState(false)
-    async function SendEmail()
+    async function SendEmail(event)
     {
+        event.preventDefault();
         console.log(Email);
         const e={
             email:Email
@@ -131,7 +133,7 @@ const Footer = () => {
             {
           status?
           <p>Thank You!</p>:""}
-            <button onClick={SendEmail} className={FooterStyle.button}>send</button>
+            <button onClick={(e)=>SendEmail(e)} className={FooterStyle.button}>send</button>
         </form>
         </div>    
         </div>

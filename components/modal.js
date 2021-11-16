@@ -7,7 +7,7 @@ import Form3 from "../components/multistepform/form3";
 import Alert from "react-bootstrap/Alert";
 import { db } from "../components/firebase";
 import { collection, addDoc } from "firebase/firestore";
-function form1({ des }) {
+function Moda({ des }) {
   const [counter, setcounter] = useState(1);
   const [show, setshow] = useState(false);
   const [status,setstatus]=useState(false)
@@ -120,4 +120,4 @@ function form1({ des }) {
   );
 }
 
-export default form1;
+export default Moda;

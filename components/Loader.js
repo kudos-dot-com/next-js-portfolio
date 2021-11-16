@@ -7,6 +7,7 @@ function loading() {
         <div>
             <Image src={Img}
              height="50"
+             alt=""
              width="50"
             >
                 </Image>            

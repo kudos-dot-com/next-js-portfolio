@@ -9,7 +9,7 @@ import {
   getDownloadURL,
 } from "@firebase/storage";
 
-function form1() {
+function Form3() {
   const [file, setfile] = useState();
   const [text, settext] = useState("Upload");
   const [percent, setpercent] = useState("");
@@ -88,4 +88,4 @@ function form1() {
   );
 }
 
-export default form1;
+export default Form3;

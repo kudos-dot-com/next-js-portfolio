@@ -14,14 +14,12 @@ function Slider() {
   const [count, setcount] = useState(0);
   const [direction, setDirection] = useState(0);
   const [data, setdata] = useState([]);
-  let size=0;
   useEffect(() => {
     console.log(api);
     axios
       .get(`${api}/projects`)
       .then((response) => {
         setdata(response.data);
-        size=response.data.length;
         console.log(response);
       })
       .catch((err) => {

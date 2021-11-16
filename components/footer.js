@@ -131,7 +131,7 @@ const Footer = () => {
             {
           status?
           <p>Thank You!</p>:""}
-            <button type="submit" onClick={SendEmail} className={FooterStyle.button}>send</button>
+            <button onClick={SendEmail} className={FooterStyle.button}>send</button>
         </form>
         </div>    
         </div>

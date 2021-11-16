@@ -1,5 +1,5 @@
 module.exports={
-    api:'http://tivra-cms.herokuapp.com',
+    api:'https://tivra-cms.herokuapp.com',
     content:{
         // home page
         home:{
@@ -21,7 +21,7 @@ module.exports={
             },
             // ongoing section
             ongoing:{
-                visible:true
+                visible:false
             }
         },
         // about page

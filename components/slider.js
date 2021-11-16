@@ -14,12 +14,14 @@ function Slider() {
   const [count, setcount] = useState(0);
   const [direction, setDirection] = useState(0);
   const [data, setdata] = useState([]);
+  let size=0;
   useEffect(() => {
     console.log(api);
     axios
       .get(`${api}/projects`)
       .then((response) => {
         setdata(response.data);
+        size=response.data.length;
         console.log(response);
       })
       .catch((err) => {
@@ -96,12 +98,12 @@ function Slider() {
           renderDotsOutside={false}
           beforeChange={(nextSlide, { currentSlide, onMove }) => {
             nextSlide - currentSlide > 0
-              ? count !== 4
+              ? count !== data.length-1
                 ? setcount(count + 1)
                 : setcount(0)
               : count !== -0
               ? setcount(count - 1)
-              : setcount(4);
+              : setcount(data.length-1);
             setDirection(nextSlide - currentSlide);
             // console.log(nextSlide + "" + currentSlide + "" + (nextSlide-currentSlide))
           }}

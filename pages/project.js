@@ -29,7 +29,7 @@ export default function ProjectPage() {
           <Navbar />
         </div>
         <div className={ProjectStyle.floatingText}>
-          <h1>look what trivia</h1>
+          <h1>look what tivra Ai</h1>
           <h3>has to offer</h3>
           <button className={ProjectStyle.Button1}>Dive In</button>
         </div>

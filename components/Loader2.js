@@ -1,0 +1,18 @@
+import React from 'react'
+import Img from '../assets/Dual Ball-1s-200px.svg';
+import Image from 'next/image'
+
+function loading() {
+    return (
+        <div>
+            <Image src={Img}
+             height="50"
+             alt=""
+             width="50"
+            >
+                </Image>            
+        </div>
+    )
+}
+
+export default loading

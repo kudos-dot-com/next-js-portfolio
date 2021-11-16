@@ -16,7 +16,7 @@ useEffect(() => {
     if(pathname == '/' ){
       Router.push('/home')
   }
-   },1000)
+   },2000)
 });
   return (
     <div className={HomeStyle.body}>

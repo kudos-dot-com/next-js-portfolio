@@ -19,7 +19,7 @@ function Form1() {
           <Form.Control
             onChange={(e) => localStorage.setItem("email", e.target.value)}
             type="email"
-            placeholder="Enter email"
+            placeholder="email@example.com"
           />
           <Form.Text className="text-muted">
             {message}

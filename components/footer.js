@@ -8,8 +8,28 @@ import Link from 'next/link'
 import { AiOutlineInstagram , AiOutlineTwitter, AiFillLinkedin } from 'react-icons/ai'
 import { FaFacebook,FaYoutube } from 'react-icons/fa'
 import { social } from '../assets/info'
+import { collection, addDoc } from "firebase/firestore";
+
 const Footer = () => {
     const [links,setlinks]=useState(["home","project","about"])
+    const [Email,setemail]=useState("");
+    
+    async function SendEmail()
+    {
+        console.log(Email);
+        const e={
+            email:Email
+        }
+        try {
+            const docRef = await addDoc(collection(db, "emails"), e);
+            console.log("Document written with ID: ", docRef.id);
+            setstatus(true);
+            localStorage.clear()
+          } catch (err) {
+            setstatus(false);
+            console.error("Error adding document: ", err);
+          }
+    }
     return ( 
         <div className={`container-fluid container-md  ${FooterStyle.body}`}>
             <div className={FooterStyle.section1}>
@@ -103,11 +123,12 @@ const Footer = () => {
         <div className={FooterStyle.section3}>
         <h2 className={FooterStyle.Support}><b>Stay In Touch</b></h2>
         <form>
-            <input type="text" 
+            <input type="text"
+            onChange={(e)=>{setemail(e.target.value)}} 
             placeholder="Enter Your Email"
             className={FooterStyle.form}></input>
             <br />
-            <button type="submit" className={FooterStyle.button}>sign up</button>
+            <button type="submit" onClick={SendEmail} className={FooterStyle.button}>send</button>
         </form>
         </div>    
         </div>

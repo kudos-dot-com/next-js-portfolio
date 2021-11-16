@@ -53,6 +53,7 @@ function Moda({ des }) {
         const docRef = await addDoc(collection(db, "careers"), e);
         console.log("Document written with ID: ", docRef.id);
         setstatus(true);
+        localStorage.clear()
       } catch (err) {
         setstatus(false);
         console.error("Error adding document: ", err);

@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     return ( 
         <div >
             {children}
-            {currentUrlPath[1]==='auth' || currentUrlPath[1] === null?'':<Footer />}
+            {currentUrlPath[1]==='auth' || currentUrlPath[1] === undefined?'':<Footer />}
         </div>
      );
 }

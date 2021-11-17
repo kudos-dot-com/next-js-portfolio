@@ -19,10 +19,10 @@ useEffect(() => {
    },2000)
 });
   return (
-    <div className={HomeStyle.body}>
-        <div>
+    <div>
+        
           <Loader />
-        </div>
+        
     </div>
   )
 }
